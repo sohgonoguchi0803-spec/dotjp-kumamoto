@@ -29,6 +29,9 @@
     var p = li.getAttribute("data-date").split("-").map(Number);
     var d = new Date(p[0], p[1] - 1, p[2]);
     var status = li.querySelector(".slot-status");
+    if (li.hasAttribute("data-cancelled")) {
+      return; // 中止の回は「次回」「終了」の対象にしない
+    }
     if (d < today) {
       li.classList.add("is-past");
       status.textContent = "終了";
