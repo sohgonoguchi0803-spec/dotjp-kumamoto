@@ -361,8 +361,6 @@ img { display: block; max-width: 100%; height: auto; }
 }
 .member-photo img { width: 100%; height: 100%; object-fit: contain; object-position: center bottom; transition: transform .3s; }
 .member:hover .member-photo img { transform: scale(1.04); }
-.member-photo-fill { padding-top: 0; }
-.member-photo-fill img { object-fit: cover; object-position: center top; }
 .member-name { font-weight: 900; font-size: 19px; color: var(--ink); line-height: 1.4; }
 .member-univ { font-size: 12px; font-weight: 700; color: var(--red); letter-spacing: .04em; margin-bottom: 6px; }
 .member-word { font-size: 13px; color: var(--muted); line-height: 1.7; }
