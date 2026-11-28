@@ -498,3 +498,24 @@ details[open] .faq-plus::after { transform: rotate(0deg); }
 }
 .members-hint { display: none; }
 @media (max-width: 520px) { .members-hint { display: block; font-size: 13px; color: var(--muted); margin: -24px 0 14px; } }
+
+/* ---------- 追加：無料・0円を目立たせる ---------- */
+.free-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.free-badges li {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 6px 16px 6px 6px; border-radius: 999px; background: #FDECEE; border: 1.5px solid var(--red);
+}
+.free-badges span { font-size: 12px; font-weight: 700; color: #fff; background: var(--red); padding: 3px 10px; border-radius: 999px; }
+.free-badges strong { font-size: 18px; font-weight: 900; color: var(--red); letter-spacing: .04em; }
+.free-mark { color: #fff; background: var(--red); padding: 1px 8px; border-radius: 4px; margin-left: 4px; font-weight: 900; }
+.tags li.tag-free { background: var(--red); border-color: var(--red); color: #fff; font-size: 14px; padding-inline: 18px; }
+.free-big { font-size: 28px; font-weight: 900; color: var(--red); line-height: 1.2; }
+.event-facts .is-free { background: #FDECEE; }
+.event-facts .is-free dt { color: var(--red); }
+.precari-info .is-free dd { line-height: 1.2; }
+.free-banner {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; width: fit-content; max-width: 100%;
+  padding: 10px 20px 10px 10px; border-radius: 14px; background: #FDECEE; border: 2px solid var(--red);
+}
+.free-banner strong { background: var(--red); color: #fff; font-size: clamp(20px, 2.6vw, 26px); font-weight: 900; padding: 4px 16px; border-radius: 8px; letter-spacing: .04em; }
+.free-banner span { font-weight: 700; color: var(--ink); font-size: 15px; }
