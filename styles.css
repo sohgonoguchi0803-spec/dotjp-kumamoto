@@ -240,8 +240,6 @@ img { display: block; max-width: 100%; height: auto; }
 .teams li span { font-size: 12px; font-weight: 500; color: var(--muted); }
 @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; } }
 
-.vision { margin-top: clamp(56px, 8vw, 96px); border-radius: 20px; overflow: hidden; background: var(--dark); }
-.vision img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 
 /* ---------- 活動内容 ---------- */
 .acts { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 32px); }
@@ -441,3 +439,75 @@ details[open] .faq-plus::after { transform: rotate(0deg); }
   .mobile-bar .btn { min-height: 46px; padding: 8px 12px; font-size: 14px; }
   body { padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px)); }
 }
+
+/* ---------- 追加：ドットジェイピー全体の実績 ---------- */
+.org-numbers { margin-top: clamp(48px, 7vw, 80px); padding: clamp(24px, 4vw, 36px); border: 1px solid var(--line); border-radius: 20px; }
+.org-numbers-title { font-weight: 700; color: var(--ink); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+.org-numbers-title::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--red); }
+.org-numbers dl { display: grid; grid-template-columns: repeat(4, 1fr); }
+.org-numbers dl div { display: grid; gap: 2px; padding: 4px 18px; }
+.org-numbers dl div + div { border-left: 1px solid var(--line); }
+.org-numbers dt { font-size: 13px; font-weight: 700; color: var(--muted); }
+.org-numbers dd { font-family: var(--font-en); font-weight: 700; font-size: clamp(32px, 4vw, 44px); line-height: 1.1; color: var(--ink); }
+.org-numbers dd small { font-family: var(--font-jp); font-size: 13px; margin-left: 3px; }
+@media (max-width: 760px) {
+  .org-numbers dl { grid-template-columns: 1fr 1fr; gap: 16px 0; }
+  .org-numbers dl div:nth-child(3) { border-left: 0; }
+}
+
+/* ---------- 追加：合説の参加情報 ---------- */
+.event-facts { display: grid; grid-template-columns: repeat(5, auto); gap: 0; border: 1px solid var(--line); border-radius: 16px; margin: -16px 0 clamp(48px, 7vw, 72px); overflow: hidden; }
+.event-facts div { padding: 16px 20px; display: grid; gap: 4px; align-content: start; }
+.event-facts div + div { border-left: 1px solid var(--line); }
+.event-facts dt { font-size: 12px; font-weight: 700; color: var(--blue); letter-spacing: .08em; }
+.event-facts dd { font-weight: 700; color: var(--ink); line-height: 1.6; }
+.event-facts dd small { display: block; font-size: 12px; font-weight: 500; color: var(--muted); }
+@media (max-width: 980px) {
+  .event-facts { grid-template-columns: 1fr 1fr; }
+  .event-facts div + div { border-left: 0; }
+  .event-facts div { border-top: 1px solid var(--line); }
+  .event-facts div:nth-child(-n+2) { border-top: 0; }
+  .event-facts div:nth-child(even) { border-left: 1px solid var(--line); }
+}
+@media (max-width: 520px) {
+  .event-facts { grid-template-columns: 1fr; }
+  .event-facts div:nth-child(even) { border-left: 0; }
+  .event-facts div:nth-child(2) { border-top: 1px solid var(--line); }
+}
+
+/* ---------- 追加：プレキャリの申し込みの流れ ---------- */
+.flow { display: grid; gap: 8px; width: 100%; max-width: 420px; }
+.flow li { display: flex; align-items: center; gap: 12px; font-weight: 700; color: var(--ink); font-size: 15px; }
+.flow li span { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-family: var(--font-en); font-size: 16px; }
+
+/* ---------- 追加：先輩の声の数字 ---------- */
+.voices-stat { margin: -8px 0 20px; color: var(--ink); font-weight: 700; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.voices-stat strong { font-family: var(--font-en); font-size: 48px; line-height: 1; color: var(--red); }
+.voices-stat strong small { font-size: 26px; }
+.voices-stat span { font-size: 12px; font-weight: 500; color: var(--muted); }
+.quotes .quote { padding-block: 18px 16px; }
+.quote blockquote { font-size: 16px; }
+
+/* ---------- 追加：企業向け ---------- */
+.biz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 3vw, 28px); margin-bottom: clamp(28px, 4vw, 40px); }
+.biz-card { border: 1px solid var(--dark-line); border-radius: 20px; padding: clamp(22px, 3.5vw, 32px); background: #181818; }
+.biz-card h3 { font-size: 19px; margin-bottom: 14px; }
+.checks { display: grid; gap: 10px; }
+.checks li { position: relative; padding-left: 26px; font-size: 15px; line-height: 1.7; }
+.checks li::before { content: ""; position: absolute; left: 2px; top: .45em; width: 12px; height: 7px; border-left: 2px solid var(--red); border-bottom: 2px solid var(--red); transform: rotate(-45deg); }
+.biz-voice { margin: 0 0 clamp(36px, 5vw, 56px); padding-left: 20px; border-left: 3px solid var(--red); }
+.biz-voice blockquote { margin: 0; color: var(--on-dark); font-size: clamp(16px, 2vw, 19px); font-weight: 700; line-height: 1.8; }
+.biz-voice figcaption { margin-top: 6px; font-size: 13px; }
+@media (max-width: 820px) { .biz-grid { grid-template-columns: 1fr; } }
+
+/* ---------- 追加：スマホではメンバーを横スクロールで見せる ---------- */
+@media (max-width: 520px) {
+  .members {
+    display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
+    margin-inline: calc(var(--gutter) * -1); padding: 0 var(--gutter) 12px;
+    scrollbar-width: thin;
+  }
+  .member { flex: 0 0 58%; scroll-snap-align: start; }
+}
+.members-hint { display: none; }
+@media (max-width: 520px) { .members-hint { display: block; font-size: 13px; color: var(--muted); margin: -24px 0 14px; } }
